@@ -1,4 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Droid Practice 1</string>
+    <string name="mark_as_read">Okundu olarak işaretle</string>
+    <string name="go_back">Geri Dön</string>
+    <string name="article_title">Makale</string>
+    <string name="article_title_second">Android Geliştirme Temelleri</string>
+    <string name="article_content_second">Bu makalede Android geliştirmenin temel prensiplerini öğreneceksiniz.\n\n• Activity ve Fragment kavramları\n• Layout tasarımı\n• Veri yönetimi\n• Kullanıcı arayüzü bileşenleri\n\nAndroid Studio ile geliştirme yapmak oldukça keyiflidir ve geniş bir kütüphane yelpazesi sunar.</string>
+    <string name="open_second_activity">Sonraki Makale</string>
 </resources>
