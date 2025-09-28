@@ -1,18 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:fillViewport="true"
+    android:padding="16dp"
+    >
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SecondActivity"
+        >
 
-</LinearLayout>
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/article_title"
+            android:navigationIcon="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Россияне проиграли два финала в один день. А Джокович драматично взял желанный 100-й титул"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/aticleImage"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image2"
+            android:contentDescription="Иллюстрация к статье"
+            android:layout_marginBottom="16dp"
+            />
+
+        <TextView
+            android:id="@+id/firstParagraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="В субботу, 24 мая, на турнире ATP-500 в Гамбурге состоялся финальный матч. Участниками решающего поединка стали 17-я ракетка мира Андрей Рублёв, посеянный под третьим номером, и 35-й номер рейтинга итальянец Флавио Коболли. Рублёв в полуфинале в двух партиях победил Феликса Оже-Альяссима (6:1, 6:4), а Коболли одержал волевую победу над Томасом Мартином Этчеверри (2:6, 7:5, 6:4)."
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/secondParagraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Рублёв провалил начало матча. В первых четырёх геймах он выиграл лишь четыре очка, причём только одно из них — на подаче. Несмотря на такое начало, россиянин попробовал вернуться в борьбу, и поначалу у него это получалось. В пятом гейме Андрей, уступая 0:4, наконец-то удержал подачу, после чего и сам сделал брейк. Но сразу после этого снова под ноль отдал свой гейм, и в восьмом гейме Коболли подал на партию, отыграв при этом брейк-пойнт, — 6:2 за 29 минут."
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/thirdParagraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="В шестом гейме Флавио смог защитить подачу, хотя у Андрея было три брейк-пойнта, — 3:3. Сразу после этого Рублёв проиграл свой гейм, и это открыло итальянцу дорогу к победе. В 10-м гейме Коболли, подавая на титул, допустил двойную ошибку, после которой Рублёв вышел на двойной брейк-пойнт. Однако россиянин этим не воспользовался, и его соперник победил — 6:2, 6:4 за 1 час 29 минут."
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Switch
+                android:id="@+id/readSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прочитано" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
