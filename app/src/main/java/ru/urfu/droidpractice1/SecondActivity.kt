@@ -16,16 +16,6 @@ import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 
 class SecondActivity : ComponentActivity() {
 
-//    private lateinit var binding: ActivitySecondBinding
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivitySecondBinding.inflate(layoutInflater)
-//        val view = binding.root
-//        setContentView(view)
-//
-//        binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
-//    }
     companion object {
         private const val SHARED_PREFS_NAME = "article_prefs"
         private const val KEY_SECOND_READ = "second_read"
@@ -53,7 +43,6 @@ class SecondActivity : ComponentActivity() {
         val readSwitch: Switch = findViewById(R.id.readSwitch)
         val backButton: Button = findViewById(R.id.backButton)
 
-        // Восстановление состояния переключателя
         val prefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE)
         readSwitch.isChecked = prefs.getBoolean(KEY_SECOND_READ, false)
 

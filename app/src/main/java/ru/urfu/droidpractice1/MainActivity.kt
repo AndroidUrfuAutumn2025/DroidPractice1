@@ -61,7 +61,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Log.d("Lifecycle", "MainActivity onCreate")
 
-        // Восстановление состояния
         val prefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE)
         likeCount = prefs.getInt(KEY_LIKES, 0)
         dislikeCount = prefs.getInt(KEY_DISLIKES, 0)
@@ -121,7 +120,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         Log.d("Lifecycle", "MainActivity onResume")
-        // Обновляем состояние при возвращении из SecondActivity
+
         isSecondArticleRead = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE)
             .getBoolean(KEY_SECOND_READ, false)
     }
