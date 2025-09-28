@@ -1,18 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:padding="16dp">
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Будущее робототехники"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Подзаголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Как роботы меняют нашу жизнь"
+            android:textSize="18sp"
+            android:textColor="#FF018786"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Изображение -->
+        <ImageView
+            android:id="@+id/articleImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#FFEEEEEE"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Основной текст -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Робототехника переживает настоящую революцию. Современные роботы способны выполнять сложные задачи, которые раньше были под силу только человеку.\n\nКлючевые достижения:"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Маркированный список -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Автономные транспортные средства\n• Хирургические роботы-ассистенты\n• Промышленные роботы-манипуляторы\n• Сервисные роботы для дома"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Переключатель "Прочитано" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <Switch
+                android:id="@+id/readSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прочитано" />
+
+        </LinearLayout>
+
+        <!-- Кнопка назад -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вернуться к первой статье"
+            android:backgroundTint="#FF6200EE" />
+
+    </LinearLayout>
+
+</ScrollView>
