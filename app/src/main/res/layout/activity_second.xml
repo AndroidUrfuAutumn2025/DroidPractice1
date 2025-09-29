@@ -15,4 +15,36 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="«Младшая хочет догнать, старшая — не отдать». Отец Кудерметовых о теннисной карьере дочек"
+        android:textColor="#150F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="314dp"
+        android:src="@drawable/article2_image" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Главная теннисная семья в России сейчас, а возможно, и во всём женском туре – Кудерметовы. Полина постепенно выходит из категории перспективных и наступает на пятки старшей сестре Веронике. Обе девушки уже уверенно держатся в топ-100 мирового рейтинга WTA. Как тут не вспомнить про Серену и Винус Уильямс?&#xA;&#xA;И так же, как и в случае с великим американским дуэтом, в истории становления сестёр Кудерметовых велика роль отца – Эдуарда. Он сам бывший спортсмен, но от тенниса раньше был максимально далёк. Кудерметов – хоккеист, легенда казанского «Ак Барса» и магнитогорского «Металлурга» 1990-х и 2000-х."
+        android:textColor="@color/black" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:showText="false"
+        android:text="Прочитано"
+        tools:checked="false" />
+
 </LinearLayout>
