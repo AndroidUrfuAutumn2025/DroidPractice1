@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="second_article_title">Факультеты Хогвартса</string>
+    <string name="second_article_subtitle">4 волшебных факультета</string>
+    <string name="second_article_content">Хогвартс школа чародейства и волшебства состоит из четырех факультетов...</string>
+    <string name="second_article_quote">"В Хогвартсе всегда примут тех, кого ждут." - Распределяющая Шляпа</string>
 </resources>
