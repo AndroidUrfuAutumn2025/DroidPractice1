@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar" />
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.DroidPractice1" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+
 </resources>

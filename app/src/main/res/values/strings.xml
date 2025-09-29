@@ -1,4 +1,37 @@
 <resources>
+
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="share">Поделиться</string>
+    <string name="like">Нравится</string>
+    <string name="dislike">Не нравится</string>
+
+    <string name="article_title">Обновление Counter-Strike 2</string>
+    <string name="article_date">26 сентября 2025 г.</string>
+    <string name="article_category">[РАЗНОЕ]</string>
+    <string name="article_image_desc">Изображение обновления Counter-Strike 2</string>
+    <string name="share_text">Обновление Counter-Strike 2 — прочитай статью в приложении!</string>
+    <string name="open_second_article">Обновление от 24 сентября 2025 г.</string>
+    <string name="second_article_read">Вторая статья прочитана</string>
+
+    <string name="share_desc">Поделиться статьёй</string>
+    <string name="like_desc">Поставить лайк</string>
+    <string name="dislike_desc">Поставить дизлайк</string>
+    <string name="share_chooser_title">Поделиться через</string>
+
+    <string name="update_1">На карте Mirage обновлена модель столкновений над лестницей на снайперской позиции.</string>
+    <string name="update_2">Обновлена геометрия и масштабирование анимации револьвера R8.</string>
+    <string name="update_3">Теперь команда sv_subtick_movement_view_angles отправляет подтиковые углы обзора на сервер только вместе с другими подтиковыми событиями.</string>
+    <string name="update_4">Включена дефрагментация с помощью Vulkan, чтобы снизить потребление ресурсов при потоковой передаче текстур.</string>
+
+
+    <string name="second_article_title">Обновление Counter-Strike 2: скрипты для карт</string>
+    <string name="second_article_subtitle">25 сентября 2025 г.</string>
+    <string name="second_article_text">
+    В script_zoo обновлён tsconfig.json с target es2022 для точного анализа типов. Объект point_script
+        при неудачной загрузке не удаляется и не приводит к сбоям, сохраняя память до успешной перезагрузки.
+        Методы, принимающие строки, генерируют ошибку при неверных типах. Instance.Msg и Instance.DebugScreenText
+        поддерживают любые текстовые значения.
+</string>
+
+    <string name="mark_as_read">Отметить как прочитанное</string>
 </resources>
