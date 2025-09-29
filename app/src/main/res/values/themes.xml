@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorBackground">@color/beige_background</item>
+        <item name="android:colorPrimary">@color/beige_primary</item>
+        <item name="android:colorPrimaryDark">@color/beige_dark</item>
+        <item name="android:colorAccent">@color/beige_accent</item>
+        <item name="android:textColorPrimary">@color/beige_dark</item>
+        <item name="android:textColorSecondary">@color/beige_secondary</item>
+    </style>
 </resources>
