@@ -12,7 +12,46 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Заголовок"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/articleImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:src="@drawable/image1"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/mainTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Основной текст"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="16dp" />
+
+    <Switch
+        android:id="@+id/switchBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:text="Прочитано" />
 
 </LinearLayout>
