@@ -2,17 +2,184 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:background="@android:color/white">
 
-    <Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_500"
+        app:navigationIcon="@drawable/arrow_back"
+        app:title="Квантовые вычисления"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Квантовые вычисления: революция в обработке данных"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="8dp" />
+
+            <!-- Подзаголовок -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Как квантовые компьютеры изменят мир вычислений и какие вызовы стоят перед исследователями"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="16dp" />
+
+            <!-- Используем существующий фон как изображение -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                android:contentDescription="Квантовый компьютер"
+                android:paddingBottom="16dp" />
+
+            <!-- Основной текст -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Квантовые вычисления представляют собой принципиально новый подход к обработке информации, основанный на законах квантовой механики. В отличие от классических битов, которые могут находиться только в состоянии 0 или 1, квантовые биты (кубиты) могут существовать в суперпозиции состояний, что позволяет обрабатывать информацию принципиально иным способом."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ключевые преимущества"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Квантовое превосходство: способность решать задачи, недоступные классическим компьютерам\n• Параллелизм: одновременная обработка множества состояний\n• Сверхпроводящие кубиты: высокая скорость операций\n• Квантовая запутанность: корреляция между кубитами"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="12dp" />
+
+            <!-- Цитата -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardBackgroundColor="@color/purple_200"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="&quot;Квантовые компьютеры не просто быстрее — они решают задачи, которые классические компьютеры принципиально не могут решить за разумное время.&quot;"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:lineSpacingExtra="4dp"
+                    android:textAlignment="center" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Области применения"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Квантовые вычисления найдут применение в различных областях:\n\n• Криптография: взлом современных шифров и создание квантово-устойчивых алгоритмов\n• Молекулярное моделирование: разработка новых лекарств и материалов\n• Оптимизация: решение сложных логистических и финансовых задач\n• Машинное обучение: ускорение тренировки нейросетей"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="16dp" />
+
+            <!-- Второе изображение - используем foreground -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:scaleType="centerCrop"
+                android:contentDescription="Квантовая схема"
+                android:paddingBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Несмотря на значительный прогресс, квантовые вычисления сталкиваются с серьезными вызовами: декогеренция, ошибки квантовых операций и масштабирование систем. Однако исследователи уверены, что эти проблемы будут решены в ближайшие годы."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Переключатель прочитано -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Отметить как прочитанное"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <Switch
+                android:id="@+id/switchRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

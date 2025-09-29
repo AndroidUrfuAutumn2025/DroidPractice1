@@ -1,4 +1,19 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Tech Articles</string>
+    <string name="article_title">Технологические статьи</string>
+
+    <!-- Тексты для первой статьи -->
+    <string name="first_article_title">Будущее искусственного интеллекта: что нас ждет в 2024 году</string>
+    <string name="first_article_intro">Искусственный интеллект продолжает трансформировать нашу жизнь с невероятной скоростью. В этой статье мы рассмотрим ключевые тенденции, которые определят развитие ИИ в ближайшем будущем.</string>
+
+    <!-- Тексты для второй статьи -->
+    <string name="second_article_title">Квантовые вычисления: революция в обработке данных</string>
+    <string name="second_article_intro">Как квантовые компьютеры изменят мир вычислений и какие вызовы стоят перед исследователями</string>
+
+    <!-- Общие строки -->
+    <string name="share_article">Поделиться статьей</string>
+    <string name="read_article">Читать статью</string>
+    <string name="article_read">Прочитано</string>
+    <string name="article_new">Новая</string>
+    <string name="mark_as_read">Отметить как прочитанное</string>
 </resources>
