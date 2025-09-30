@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+    <string name="second_article_title">Тут вы тоже не найдёте ничего интересного</string>
+    <string name="second_article_body_1">Поэтому я просто размещу здесь несколько прикольных фоток с котятами. Главное ведь, что ТЗ соблюдено, да? Смотрите какой милаш, такой типа "бе-бе-бе" :3</string>
+    <string name="second_article_body_2">А этот вышел подышать на свежем воздухе. Даже котята трогают траву, в отличие от программистов</string>
+    <string name="second_article_switch">Я прочитал эту статью</string>
+    <string name="content_description_1">Изображение</string>
+    <string name="content_description_2">Изображение</string>
 </resources>
