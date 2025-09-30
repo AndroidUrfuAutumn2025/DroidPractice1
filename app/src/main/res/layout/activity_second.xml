@@ -5,14 +5,103 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center|center_vertical"
     android:orientation="vertical"
+    android:padding="5.dp"
     tools:context=".SecondActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="717dp"
+        android:orientation="vertical"
+        android:padding="5.dp">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/teal_200"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Виктор Степаныч"
+            android:textAlignment="center"
+            android:textColor="#DD000000"
+            android:textSize="20sp"
+            android:typeface="normal" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="253dp"
+            android:padding="5.dp"
+            android:src="@drawable/nikita"
+            android:textAlignment="textEnd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="383dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_yaer"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/teal_200"
+                android:fontFamily="sans-serif-black"
+                android:lineSpacingExtra="10sp"
+                android:padding="5.dp"
+                android:text="Возраст"
+                android:textColor="#DD000000"
+                android:textSize="18.sp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:padding="5.dp"
+                android:text="46 лет"
+                android:textSize="16.sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/titel_first_year"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/teal_200"
+                android:fontFamily="sans-serif-black"
+                android:padding="5.dp"
+                android:text="Ранние годы"
+                android:textColor="#DD000000"
+                android:textSize="18.sp" />
+
+            <TextView
+                android:id="@+id/first_year"
+                android:layout_width="match_parent"
+                android:layout_height="154dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5.dp"
+                android:scrollHorizontally="false"
+                android:text="@string/content_title_two"
+                android:textSize="16sp"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
