@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:padding="16dp">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:theme="@style/ToolbarTheme"
+        app:navigationIcon="@drawable/arrow_back"
+        app:title="@string/second_article_title" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/image_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textAuthor"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="end"
+                android:text="@string/second_article_author" />
+
+            <TextView
+                android:id="@+id/textHeader"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:text="@string/second_article_header" />
+
+            <TextView
+                android:id="@+id/textContent"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="start"
+                android:text="@string/second_article_content"
+                android:textAlignment="textStart" />
+
+            <Switch
+                android:id="@+id/switchRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/read" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
