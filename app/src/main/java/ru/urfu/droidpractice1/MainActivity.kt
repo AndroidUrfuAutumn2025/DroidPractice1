@@ -2,7 +2,7 @@ package ru.urfu.droidpractice1
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.MutableIntState
@@ -12,7 +12,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import ru.urfu.droidpractice1.content.MainActivityScreen
 
-class MainActivity : ComponentActivity() {
+class MainActivity : BaseActivity() {
     private var isNextArticleRead by mutableStateOf(false)
 
     private fun shareArticle(content: String) {
@@ -62,6 +62,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate")
         isNextArticleRead = savedInstanceState?.getBoolean("IS_READ", false) == true
         setContent {
             MainActivityScreen(
@@ -74,6 +75,7 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        Log.d(TAG, "onSaveInstanceState")
         outState.putBoolean("IS_READ", isNextArticleRead)
         super.onSaveInstanceState(outState)
     }

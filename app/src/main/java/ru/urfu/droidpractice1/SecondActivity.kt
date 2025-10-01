@@ -1,15 +1,15 @@
 package ru.urfu.droidpractice1
 
 import android.content.Intent
-import androidx.activity.ComponentActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 
-class SecondActivity : ComponentActivity() {
+class SecondActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySecondBinding
 
@@ -33,6 +33,7 @@ class SecondActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate")
         isRead =
             if (intent.hasExtra("IS_READ")) {
                 intent.getBooleanExtra("IS_READ", false)
@@ -109,6 +110,7 @@ class SecondActivity : ComponentActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        Log.d(TAG, "onSaveInstanceState")
         outState.putBoolean("IS_READ", isRead)
         super.onSaveInstanceState(outState)
     }
