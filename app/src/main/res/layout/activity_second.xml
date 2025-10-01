@@ -8,11 +8,112 @@
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/article_title"
+        app:navigationIcon="@drawable/arrow_back" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="Афганистан полностью отключили от интернета!"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_gravity="center">
+
+        <!-- Лайк -->
+        <LinearLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/likeButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/img_2"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:contentDescription="Дизлайк"/>
+
+            <TextView
+                android:id="@+id/likeCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- Дизлайк -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/dislikeButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/img_3"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:contentDescription="Дизлайк"/>
+
+            <TextView
+                android:id="@+id/dislikeCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/read_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Прочитано" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:src="@drawable/img_1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="386dp"
+        android:text="Талибы перерезали оптоволоконные кабели, остановили мобильный интернет,
+        телефонию и спутниковое ТВ. В стране наступил полный цифровой блэкаут.
+        Более 40 миллионов человек остались без интернета, связи и вообще доступа к
+        современным коммуникациям. Нарушены банковские, деловые и даже авиасообщения.
+        Талибан официально объясняет это «борьбой с аморальностью» и
+        «распространением безнравственности»."
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:lineSpacingMultiplier="1.3"/>
 
 </LinearLayout>
