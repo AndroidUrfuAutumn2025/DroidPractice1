@@ -18,49 +18,47 @@ class SecondActivity : ComponentActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Log.d("Lifecycle", "SecondActivity onCreate")
+
+        // Получаем статус из Intent
+        isRead = intent.getBooleanExtra(EXTRA_READ_STATUS, false)
+
+        setupViews()
+        setupClickListeners()
+        loadImage()
+    }
+
+    private fun setupClickListeners() {
         binding.backButton.setOnClickListener {
             returnWithResult()
         }
 
-        val imageUrl = "https://i.pinimg.com/originals/49/33/3c/49333c14d76e5c6ae692c28aded83717.png"
-        binding.articleImageView.load(imageUrl) {
-            crossfade(true)
-        }
-
-        isRead = savedInstanceState?.getBoolean(KEY_READ_STATUS)
-            ?: intent.getBooleanExtra(EXTRA_READ_STATUS, false)
         binding.readSwitch.isChecked = isRead
         binding.readSwitch.setOnCheckedChangeListener { _, isChecked ->
             isRead = isChecked
             Log.d("SecondActivity", "Read status changed to: $isRead")
         }
-
-        setupViews()
     }
 
-    private fun returnWithResult() {
-        val resultIntent = Intent().apply {
-            putExtra(MainActivity.EXTRA_IS_READ, isRead)
+    private fun loadImage() {
+        val imageUrl = "https://i.pinimg.com/originals/49/33/3c/49333c14d76e5c6ae692c28aded83717.png"
+        binding.articleImageView.load(imageUrl) {
+            crossfade(true)
         }
-        setResult(RESULT_OK, resultIntent)
-        finish()
     }
 
     @SuppressLint("SetTextI18n")
     private fun setupViews() {
-        binding.subtitleTextView.text = "4 волшебных факультета Хогвартса"
-        binding.contentTextView.text = """
-            Хогвартс школа чародейства и волшебства состоит из четырех факультетов, каждый из которых основан одним из великих волшебников.
+        binding.subtitleTextView.text = getString(R.string.subtitle)
+        binding.contentTextView.text = getString(R.string.hogwarts_content)
+        binding.quoteTextView.text = getString(R.string.hogwarts_quote)
+    }
 
-            Гриффиндор - основан Годриком Гриффиндором. Ценности: храбрость, благородство, честь и решительность.
-
-            Слизерин - основан Салазаром Слизерином. Ценности: амбициозность, хитрость, находчивость.
-
-            Когтевран - основан Кандидой Когтевран. Ценности: ум, мудрость, интеллект и творчество.
-
-            Пуффендуй - основан Пенелопой Пуффендуй. Ценности: трудолюбие, верность, честность.
-        """.trimIndent()
-        binding.quoteTextView.text = "\"В Хогвартсе всегда примут тех, кого ждут.\" - Распределяющая Шляпа"
+    private fun returnWithResult() {
+        val resultIntent = Intent().apply {
+            putExtra(EXTRA_IS_READ, isRead)
+        }
+        setResult(RESULT_OK, resultIntent)
+        finish()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -68,38 +66,51 @@ class SecondActivity : ComponentActivity() {
         outState.putBoolean(KEY_READ_STATUS, isRead)
     }
 
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        isRead = savedInstanceState.getBoolean(KEY_READ_STATUS, false)
+        binding.readSwitch.isChecked = isRead
+    }
+
     override fun onBackPressed() {
         returnWithResult()
         super.onBackPressed()
     }
 
-    companion object {
-        private const val KEY_READ_STATUS = "read_status"
-        const val EXTRA_READ_STATUS = "extra_read_status"
-    }
-
     override fun onStart() {
         super.onStart()
-        Log.d("Lifecycle", "SecondActivity onStart")
+        Log.d(CLASS, "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("Lifecycle", "SecondActivity onResume")
+        Log.d(CLASS, "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("Lifecycle", "SecondActivity onPause")
+        Log.d(CLASS, "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("Lifecycle", "SecondActivity onStop")
+        Log.d(CLASS, "onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(CLASS, "onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("Lifecycle", "SecondActivity onDestroy")
+        Log.d(CLASS, "onDestroy")
+    }
+
+    companion object {
+        private const val KEY_READ_STATUS = "read_status"
+        const val EXTRA_READ_STATUS = "extra_read_status"
+        const val EXTRA_IS_READ = "is_read"
+        private const val CLASS = "SecondActivity"
     }
 }
