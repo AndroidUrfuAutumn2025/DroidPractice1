@@ -26,7 +26,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -44,7 +43,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.edit
 import coil.compose.AsyncImage
 import ru.urfu.droidpractice1.R
 import ru.urfu.droidpractice1.SecondActivity
@@ -54,12 +52,10 @@ import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 @Composable
 fun MainActivityScreen() {
     val context = LocalContext.current
-    val sharedPreferences = context.getSharedPreferences("app_prefs", android.content.Context.MODE_PRIVATE)
 
     var likeCount by rememberSaveable { mutableIntStateOf(0) }
     var dislikeCount by rememberSaveable { mutableIntStateOf(0) }
-
-    var isSecondArticleRead by rememberSaveable { mutableStateOf(sharedPreferences.getBoolean("read_state", false)) }
+    var isSecondArticleRead by rememberSaveable { mutableStateOf(false) }
 
     val secondArticleLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult()
@@ -67,12 +63,6 @@ fun MainActivityScreen() {
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             val read = result.data?.getBooleanExtra("read_state", false) ?: false
             isSecondArticleRead = read
-        }
-    }
-
-    LaunchedEffect(isSecondArticleRead) {
-        sharedPreferences.edit {
-            putBoolean("read_state", isSecondArticleRead)
         }
     }
 

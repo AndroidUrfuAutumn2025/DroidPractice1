@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
-import androidx.core.content.edit
 import coil.load
 import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 
@@ -31,10 +30,6 @@ class SecondActivity : ComponentActivity() {
                 putExtra("read_state", isChecked)
             }
             setResult(RESULT_OK, resultIntent)
-
-            getSharedPreferences("app_prefs", MODE_PRIVATE).edit {
-                putBoolean("read_state", isChecked)
-            }
         }
     }
 
