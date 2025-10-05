@@ -9,6 +9,7 @@ class SecondActivity : ComponentActivity() {
 
     private lateinit var binding: ActivitySecondBinding
     private var isRead = false
+    private val TAG = "SecondActivity_lifecycle"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,36 @@ class SecondActivity : ComponentActivity() {
         binding.toolbar.setNavigationOnClickListener {
             finishWithResult()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart")
     }
 
     private fun finishWithResult() {
