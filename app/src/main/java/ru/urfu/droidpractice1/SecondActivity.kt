@@ -16,7 +16,7 @@ import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 import android.graphics.drawable.GradientDrawable
 import androidx.core.content.ContextCompat
 
-class SecondActivity : ComponentActivity() {
+class SecondActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySecondBinding
     private var isRead = false
