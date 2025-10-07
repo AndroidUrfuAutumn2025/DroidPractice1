@@ -45,13 +45,13 @@
                 android:textColor="@color/black" />
 
             <ImageView
+                android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_margin="12dp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/second_article_title"
-                android:scaleType="centerCrop"
-                android:src="@drawable/second_article_picture" />
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:layout_width="match_parent"

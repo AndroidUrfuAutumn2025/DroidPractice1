@@ -41,10 +41,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.integration.compose.GlideImage
 import ru.urfu.droidpractice1.R
 import ru.urfu.droidpractice1.SecondActivity
 import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun MainActivityScreen() {
     val context = LocalContext.current
@@ -100,7 +103,7 @@ fun MainActivityScreen() {
                     Row(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        IconButton(onClick = { numberOfLikes += 1 }) {
+                        IconButton(onClick = { numberOfLikes++ }) {
                             Icon(Icons.Filled.FavoriteBorder, contentDescription = "Like")
                         }
                         if(numberOfLikes != 0) {
@@ -112,7 +115,7 @@ fun MainActivityScreen() {
                     Row(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        IconButton(onClick = { numberOfDislikes += 1 }) {
+                        IconButton(onClick = { numberOfDislikes++ }) {
                             Icon(Icons.Filled.Clear, contentDescription = "Dislike")
                         }
                         if(numberOfDislikes != 0) {
@@ -123,9 +126,9 @@ fun MainActivityScreen() {
                     }
                 }
 
-                AsyncImage(
-                    model = R.drawable.main_article_picture,
-                    contentDescription = "null",
+                GlideImage(
+                    model = "https://img.championat.com/s/1350x900/news/big/y/k/otchyot-barselona-real-sosedad-2-1_1759085921554350046.jpg",
+                    contentDescription = null,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(12.dp)
