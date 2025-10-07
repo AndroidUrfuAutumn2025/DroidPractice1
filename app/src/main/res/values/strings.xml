@@ -1,4 +1,19 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Droid Practice 1</string>
+    <string name="article_title">«Зелёная миля»</string>
+    <string name="article_content">«Зелёная миля» (англ. The Green Mile) — тридцатый роман американского писателя Стивена Кинга в жанре психологической драмы с элементами тёмного фэнтези и южной готики.\n\n Был опубликован в 1996 году, при этом роман выходил по частям. \n\n Некоторые темы и мотивы:</string>
+    <string name="article_features">• Добро и зло — центральная тема романа.\n\n• Смертная казнь и правосудие — автор поднимает важные вопросы о справедливости и наказании.\n\n• Чудо и мистика — сверхъестественные способности Джона Коффи добавляют элемент мистики в реалистическую драму.</string>
+    <string name="share_article">Поделиться этой статьей</string>
+    <string name="read_next">Читать следующую статью</string>
+    <string name="likes">Лайки: %d</string>
+    <string name="dislikes">Дизлайки: %d</string>
+    <string name="article_read_status">Статья прочитана: %s</string>
+    <string name="second_article_title">«Безнадёга»</string>
+    <string name="second_article_content">«Безнадёга» — роман Стивена Кинга в жанре хоррор. Произведение написано в 1996 году.</string>
+    <string name="second_article_sales">Сюжет: на автостраде через горняцкий городок Безнадёжный люди, совершенно непохожие друг на друга — известный писатель, молодая супружеская пара, мальчик, истово верующий в Бога — были арестованы безумным полицейским-маньяком. Чудом им удаётся сбежать из-под стражи, но они не знают, насколько древние тёмные силы отправятся в погоню за ними. </string>
+    <string name="second_article_pros">Главная идея: </string>
+    <string name="second_article_pros_list">• попустительство Бога творящемуся на Земле злу.</string>
+    <string name="second_article_cons">Возрастные ограничения:</string>
+    <string name="second_article_cons_list">• 16+.</string>
+    <string name="mark_as_read">Отметить как прочитано</string>
 </resources>
