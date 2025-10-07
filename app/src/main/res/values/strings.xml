@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="article_title">Собаки</string>
+    <string name="article_subtitle">Корги Букля</string>
+    <string name="article_full_text">Рыжий корги резво несётся по изумрудному полю, его короткие лапки едва поспевают за длинным телом. Его уши-локаторы улавливают каждый звук, а улыбка способна растопить любое сердце.</string>
+    <string name="article_quote">\"Он — улыбка, пришитая к ушастому хлебцу\"</string>
+    <string name="share_article">Поделиться статьей</string>
+
+    <string name="second_article_title">Коты</string>
+    <string name="second_article_subtitle">Пушистый кот Барбос, похожий на маленького тигра</string>
+    <string name="second_article_content">Полосатый котик по имени Барбос нежится в лучах солнца на фоне безмятежного голубого неба. Его мех окрашен в небесные тона, а полоски похожи на проплывающие в вышине облака.</string>
+    <string name="second_article_quote">\"Он пасет облака, как крошечная овечка»\"</string>
 </resources>
