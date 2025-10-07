@@ -2,8 +2,10 @@
 
 package ru.urfu.droidpractice1.content
 
-import android.content.Context
+import android.app.Activity
 import android.content.Intent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,7 +16,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.Button
@@ -27,8 +28,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -40,21 +43,39 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import ru.urfu.droidpractice1.R
 import ru.urfu.droidpractice1.SecondActivity
+import ru.urfu.droidpractice1.state.ArticleState
 import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun MainActivityScreen() {
+fun MainActivityScreen(articleState: ArticleState = ArticleState()) {
     val context = LocalContext.current
+    val scrollState = rememberScrollState()
+
     val articleTitle = stringResource(R.string.main_article_title)
-    var numberOfLikes by rememberSaveable { mutableIntStateOf(0) }
-    var numberOfDislikes by rememberSaveable { mutableIntStateOf(0) }
-    val isArticleRead = SecondActivity.isArticleRead
+    var numberOfLikes by rememberSaveable { mutableIntStateOf(articleState.likes) }
+    var numberOfDislikes by rememberSaveable { mutableIntStateOf(articleState.dislikes) }
+    var isArticleRead by rememberSaveable { mutableStateOf(articleState.isRead) }
+
+    val secondActivityLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            result.data?.let { data ->
+                isArticleRead = data.getBooleanExtra("IS_READ", false)
+            }
+        }
+    }
+
+    LaunchedEffect(numberOfLikes, numberOfDislikes) {
+        articleState.likes = numberOfLikes
+        articleState.dislikes = numberOfDislikes
+        articleState.isRead = isArticleRead
+    }
 
     DroidPractice1Theme {
         Scaffold(
@@ -88,7 +109,7 @@ fun MainActivityScreen() {
                     .fillMaxSize()
                     .padding(innerPadding)
                     .padding(horizontal = 12.dp)
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(scrollState)
             ) {
                 Text(
                     stringResource(R.string.main_article_title),
@@ -155,8 +176,12 @@ fun MainActivityScreen() {
 
                 Button(
                     onClick = {
-                        val intent = Intent(context, SecondActivity::class.java)
-                        context.startActivity(intent)
+                        val intent = Intent(context, SecondActivity::class.java).apply {
+                            putExtra("LIKES_COUNT", numberOfLikes)
+                            putExtra("DISLIKES_COUNT", numberOfDislikes)
+                            putExtra("IS_READ", isArticleRead)
+                        }
+                        secondActivityLauncher.launch(intent)
                     },
                     modifier = Modifier
                         .fillMaxWidth()
