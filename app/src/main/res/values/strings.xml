@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+    <string name="first_article_title">Искусство программирования</string>
+    <string name="second_article_title">Современные технологии</string>
+    <string name="share_article">Поделиться статьей</string>
+    <string name="like">👍</string>
+    <string name="dislike">👎</string>
+    <string name="read_more">Читать далее</string>
+    <string name="read_completed">Прочитано</string>
+    <string name="mark_as_read">Прочитано</string>
+    <string name="article_read_status">Статус прочтения</string>
+    
+    <string name="first_article_content">Программирование — это искусство создания решений для сложных задач с помощью кода. В современном мире разработчики используют множество языков программирования, каждый из которых имеет свои особенности и области применения.</string>
+    <string name="first_article_paragraph1">Kotlin стал официальным языком для разработки Android приложений, заменив Java во многих проектах. Его синтаксис более лаконичный и безопасный, что делает код более читаемым и менее подверженным ошибкам.</string>
+    <string name="first_article_paragraph2">Jetpack Compose — это современный инструментарий для создания пользовательских интерфейсов в Android. Он позволяет создавать декларативные UI с помощью Kotlin, что значительно упрощает разработку и поддержку приложений.</string>
+    
+    <string name="second_article_content">Современные технологии развиваются с невероятной скоростью. Искусственный интеллект, машинное обучение, блокчейн и квантовые вычисления — все эти области открывают новые возможности для человечества.</string>
+    <string name="second_article_paragraph1">Машинное обучение позволяет компьютерам учиться на данных без явного программирования. Это революционная технология, которая уже сейчас используется в медицинской диагностике, автономных автомобилях и рекомендательных системах.</string>
+    <string name="second_article_paragraph2">Блокчейн технология обеспечивает безопасное и прозрачное хранение данных. Она лежит в основе криптовалют и может быть использована в различных областях: от финансов до логистики и здравоохранения.</string>
 </resources>
