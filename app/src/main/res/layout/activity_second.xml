@@ -15,4 +15,72 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Новые горизонты: что нас ждет?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Изображение -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#F0F0F0"
+        android:paddingBottom="16dp"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Инновации, меняющие повседневность"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="#757575"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:text="Технологический прогресс не стоит на месте. Мы стоим на пороге новой эры, где искусственный интеллект, квантовые вычисления и передовые биотехнологии открывают невиданные возможности."
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:lineSpacingExtra="3dp"
+        android:textAlignment="textStart"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Отметить как прочитанное" />
+
+        <Switch
+            android:id="@+id/switchRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 </LinearLayout>
