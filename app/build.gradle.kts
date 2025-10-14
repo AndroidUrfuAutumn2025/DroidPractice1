@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "ru.urfu.droidpractice1"
-        minSdk = 28
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -61,4 +61,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("androidx.compose.material:material-icons-extended:1.4.0")
+    implementation("androidx.compose.material3:material3:1.1.0")
+
+    implementation("androidx.compose.material:material:1.4.0")
+    implementation("androidx.compose.ui:ui:1.4.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
+    implementation("androidx.activity:activity-compose:1.7.0")
 }
