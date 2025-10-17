@@ -1,18 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".SecondActivity">
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
 
-</LinearLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Вторая статья"
+            android:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Ядерная реакция и выделение энергии"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/articleImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nuclear_reaction"
+            android:contentDescription="Схема ядерной реакции" />
+
+        <TextView
+            android:id="@+id/imageCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Схематическое изображение деления ядра урана-235 при попадании в него нейтрона: образуется криптон-92 и барий-141, 3 нейтрона, и большое количество энергии"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/articleContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Наиболее заметно изменение массы и выделение энергии при ядерных реакциях - когда происходят изменения в самих ядрах элементов.\n\nПри ядерной реакции с выделением энергии масса полученных элементов меньше массы исходных частиц. Например, 1 грамм урана-235 при делении уменьшается на ~1 милиграмм, или на 0,1%. Но это приводит к выделению 3.2 × 10⁻¹¹ Дж на одно ядро.\n\nА на 1 грамм это 8.2 × 10¹⁰ Дж (82 миллиарда джоулей). Это эквивалентно энергии сжигания до 3 тонн каменного угля!\n\nСхематическое изображение деления ядра урана-235 при попадании в него нейтрона: образуется криптон-92 и барий-141, 3 нейтрона, и большое количество энергии. Выделившаяся энергия строго равна дефекту массы (уменьшению массы получившихся элементов) с коэффициентом c².\n\nНо и в обычных химических реакциях изменяется энергия связей между атомами, поэтому происходит изменение эквивалентной этой энергии массы (правда, столь мизерное, что не учитывается, поскольку не фиксируется обычными приборами)!"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Статья прочитана"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/readSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
