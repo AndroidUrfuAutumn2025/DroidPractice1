@@ -12,7 +12,75 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:text="Mercedes-Benz W202"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="5dp"
+        android:text="Mercedes-Benz W202 — легковой автомобиль среднего класса немецкого
+автопроизводителя Mercedes-Benz из серии С-класса. Пришёл на смену модели W201
+в мае 1993 года. До появления A-класса в 1997 году
+оставался стартовой моделью компании.  Автомобиль выпускался в кузовах седан с 1993
+по 2000 год и универсал с 1996 по 2001 год. Помимо стандартной линейки моделей автомобиль предлагался в
+высокопроизводительных модификациях от подразделения Mercedes-AMG. "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:contentDescription="W202"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:src="@drawable/w202"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:text="В 1993 году покупатель имел выбор из восьми двигателей различного объёма.
+Базовыми моделями считались дизельный двигатель OM601 в двух версиях Р4: С200 Diesel и
+С220 Diesel соответственно объёмом 1997 и 2155 см³, мощностью 74 и 94 л.с., моментом 130 и
+150 Н·м. Возглавляла дизельный ряд модель C250 Diesel c 2497 см³ пятицилиндровым ОМ605.
+Бензиновые модели имели три «четверки» М111: С180 (1799 см³, 120 л.с., 170 Н·м),
+С200 (1998 см³, 136 л.с., 190 Н·м) и С220 (2199 см³, 150 л.с., 210 Н·м) и флагман С280 с
+рядным шестицилиндровым М104 (2799 см³, 193 л.с., 270 Н·м)."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <Switch
+        android:id="@+id/isReadSwitch"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:text="Прочитано"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
 </LinearLayout>
