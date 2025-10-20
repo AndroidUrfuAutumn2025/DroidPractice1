@@ -1,4 +1,40 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+
+    <string name="article_heading">Don’t Tap The Glass — обзор альбома Tyler, The Creator</string>
+
+    <string name="article_lead">Звучание альбома пронизано весьма оригинальной атмосферой: у Tyler свой уникальный стиль, где резкие хип-хоп биты перекликаются с мелодичными переходами.</string>
+
+    <string name="paragraph_1">Вокал рэпера сменяется от агрессивного до меланхоличного — в этой динамике и формируется основная энергия релиза. Свой вайб, свой стиль, своё звучание.</string>
+
+    <string name="paragraph_2">В чём у Tyler, The Creator главные претензии к индустрии хип-хопа?</string>
+
+    <string name="paragraph_3">Первая — это полная импотенция «экспертов», которые боятся говорить правду и критиковать «модных» рэперов на хайпе. Вторая — тупиковый путь музыканта, идущего по проторенным рельсам: реклама, кино, работа с сервисами. Всё по шаблону, без уникальности личности.</string>
+
+    <string name="paragraph_4">Поэтому альбом «Don’t Tap The Glass» — это не просто сборник треков, а концептуальное повествование, объединённое общей идеей, которое заставляет слушателя задуматься. 28 минут танцевальной лихорадки и неконтролируемого безумия, где настроение меняется по нескольку раз за трек.</string>
+
+    <string name="blockquote_author">Tyler, The Creator — о новом альбоме</string>
+
+    <string name="blockquote_text">«Я спросил у некоторых друзей, почему они не танцуют на публике… Тогда я подумал: "Чёрт, да они же не могут нормально самовыражаться, из-за этого у них пропала связь с музыкой". Это заставило меня задуматься о том, что мы постоянно заглушаем наше душевное состояние из-за страха стать мемом… Я только что вернулся с закрытой вечеринки — 300 человек, никаких телефонов. Только колонки. Это было действительно прекрасно…»</string>
+
+    <string name="paragraph_5">Для поклонников хип-хопа и электронной музыки 2000-х и 2010-х, а также тех, кто следит за новаторами, «Don’t Tap The Glass» станет обязательным к прослушиванию.</string>
+
+    <string name="paragraph_6">Стоит поговорить и про оформление альбома — оно тоже мемное, с отсылками к образам 90-х и 2000-х: LL Cool J, Ludacris, 50 Cent.</string>
+
+    <string name="rating">Оценка: 8,9/10</string>
+
+    <string name="tracks">Лучшие треки: Big Poe, Sugar On My Tongue, Sucka Free, Stop Playing With Me, Don’t Tap The Glass / Tweakin’, Don’t You Worry Baby, I’ll Take Care of You.</string>
+
+    <string name="img_tyler">android.resource://ru.urfu.droidpractice1/drawable/tyler_</string>
+    <string name="img_tyler_desc">Фото: Tyler — обложка</string>
+
+    <string name="img_tyler_creator">android.resource://ru.urfu.droidpractice1/drawable/tyler_the_creator</string>
+    <string name="img_tyler_creator_desc">Фото: Tyler на сцене</string>
+
+    <string name="img_tyler_2">android.resource://ru.urfu.droidpractice1/drawable/tyler_2</string>
+    <string name="img_tyler_2_desc">Фото: кадр из арт-буклета</string>
+
+    <string name="img_sa">android.resource://ru.urfu.droidpractice1/drawable/sa</string>
+    <string name="img_sa_desc">Иллюстрация: оформление альбома</string>
 </resources>

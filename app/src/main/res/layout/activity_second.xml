@@ -15,4 +15,80 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chromаkopia: что нужно знать о новом альбоме Tyler, the Creator"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="28 октября Tyler, the Creator выпустил седьмой студийный альбом. Разбираемся, почему это важный и нетипичный релиз"
+                android:textStyle="italic"
+                android:paddingBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тайлер, эры и стиль"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тайлер Грегори Оконма, более известный как Tyler, The Creator, — не просто рэпер, а настоящий арт-перформанс современной хип-хоп сцены. Его путь начался с музыкального объединения Odd Future Wolf Gang Kill Them All (OFWGKTA), где он выступал в роли одного из лидеров и идеологов..."
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="12dp" />
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tylerthecreator" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Прочитано"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
+
+        <Switch
+            android:id="@+id/switchRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 </LinearLayout>
