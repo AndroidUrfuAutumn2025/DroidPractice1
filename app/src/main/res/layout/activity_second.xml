@@ -15,4 +15,6 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+
+
 </LinearLayout>
