@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".SecondActivity">
 
     <Toolbar
@@ -14,5 +15,48 @@
         android:layout_height="wrap_content"
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Расширенные стратегии Cypher"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/placeholder"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/second_article_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Have you read the article?" />
+
+        <Switch
+            android:id="@+id/hasBeenReadCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>
