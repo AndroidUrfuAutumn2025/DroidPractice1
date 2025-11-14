@@ -15,4 +15,152 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".SecondActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_title"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@color/purple_200"
+                android:contentDescription="Toyota Camry"
+                android:src="@drawable/img2" />
+
+            <TextView
+                android:id="@+id/articleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_content"
+                android:textSize="18sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/articleSales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_sales"
+                android:textSize="18sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:background="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/reviewsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_reviews_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:padding="8dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/articlePros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_pros"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/articleProsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_pros_list"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="8dp"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/articleCons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_cons"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:id="@+id/articleConsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_cons_list"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="8dp"
+                android:textAlignment="textStart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/ic_launcher_background"
+                android:padding="16dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical">
+
+                <Switch
+                    android:id="@+id/switchRead"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mark_as_read"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/readStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Статья не прочитана"
+                    android:textStyle="italic"
+                    android:paddingStart="16dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вернуться к первой статье"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

@@ -1,4 +1,20 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Droid Practice 1</string>
+    <string name="article_title">Toyota Camry</string>
+    <string name="article_content">Toyota Camry — седан бизнес-класса японского автоконцерна Toyota Motor Corporation.\n\nНазвание происходит от японского слова «канмури», что означает «корона».\n\nОсобенности:</string>
+    <string name="article_features">• В зависимости от модели и года выпуска оснащается бензиновыми, гибридными или дизельными двигателями различного объёма — от 2,0 до 3,5 литров.\n\n• Предлагает обширный список стандартного оборудования: климат-контроль, систему стабилизации, панорамную крышу и другие опции.\n\n• В некоторых рынках, таких как Северная Америка и Европа, Camry доступна исключительно с гибридными силовыми установками.</string>
+    <string name="share_article">Поделиться статьей</string>
+    <string name="read_next">Читать следующую статью</string>
+    <string name="likes">Лайки: %d</string>
+    <string name="dislikes">Дизлайки: %d</string>
+    <string name="article_read_status">Статья прочитана: %s</string>
+    <string name="second_article_title">История</string>
+    <string name="second_article_content">Модель выпускается с 1982 года.\n\nСборка: Япония, США, Австралия (до 2017 года), Россия (до 2022 года), Китай.</string>
+    <string name="second_article_sales">Рекорд продаж: самый продаваемый легковой автомобиль в США с 1997 по 2020 год.</string>
+    <string name="second_article_reviews_title">Отзывы</string>
+    <string name="second_article_pros">Некоторые положительные стороны, отмеченные владельцами:</string>
+    <string name="second_article_pros_list">• надёжность автомобиля при своевременном обслуживании;\n\n• хорошая динамика.</string>
+    <string name="second_article_cons">Некоторые недостатки, упомянутые в отзывах:</string>
+    <string name="second_article_cons_list">• шум по трассе;\n\n• качество кожаной отделки салона — после 130–150 тыс. км у многих владельцев кожа начинает затираться.</string>
+    <string name="mark_as_read">Отметить как прочитано</string>
 </resources>
