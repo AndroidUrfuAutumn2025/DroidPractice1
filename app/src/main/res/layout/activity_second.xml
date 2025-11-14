@@ -1,18 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#1A237E"
+    android:fillViewport="true"
     tools:context=".SecondActivity">
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#740001">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:padding="16dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:contentDescription="Назад"
+                app:tint="#FFFFFF"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Факультеты Хогвартса"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/articleImageView"
+            android:layout_width="400dp"
+            android:layout_height="480dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="16dp"
+            android:contentDescription="Герб Хогвартса"
+            android:scaleType="centerCrop"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="start"
+            android:padding="16dp"
+            android:text="4 волшебных факультета Хогвартса"
+            android:textColor="#D4AF37"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="16dp"
+            android:text="Основной текст статьи..."
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/quoteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="#33D4AF37"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Цитата из книги..."
+            android:textColor="#D4AF37"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="#33740001"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:padding="16dp">
+
+            <Switch
+                android:id="@+id/readSwitch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:paddingVertical="8dp"
+                android:text="Отметить как прочитанное"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
