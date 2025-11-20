@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Championat News</string>
+    <string name="first_article_title">Статья</string>
+    <string name="second_article_title">Вторая статья</string>
+
+    <string name="first_article_header1">«Кайрат» проиграл два матча в Лиге чемпионов с общим счётом 1:9</string>
+    <string name="first_article_date">30 сентября 2025, 21:41 МСК</string>
+    <string name="first_article_par1">Казахстанский «Кайрат» проиграл два матча в общем этапе Лиги чемпионов сезона-2025/2026 с общим счётом 1:9. Сегодня, 30 сентября, клуб потерпел домашнее поражение от «Реала» со счётом 0:5.</string>
+    <string name="first_article_header2">Детали матча</string>
+    <string name="first_article_par2">В 1-м туре Лиги чемпионов «Кайрат» на выезде уступил лиссабонскому «Спортингу» со счётом 1:4.\nВ 3-м туре общего этапа ЛЧ алма-атинская команда под руководством Рафаэля Уразбахтина сыграет дома с «Пафосом». Матч состоится 21 октября.\nФинал нынешнего розыгрыша Лиги чемпионов пройдёт на стадионе «Пушкаш Арена» в Будапеште. Решающий матч соревнования состоится 30 мая 2026 года. Действующий победитель Лиги чемпионов — «Пари Сен-Жермен».</string>
+
+    <string name="second_article_author">Антон Панченко</string>
+    <string name="second_article_header">Дубли Коростелёва и Порядина помогли «Спартаку» обыграть «Трактор» в результативном матче</string>
+    <string name="second_article_content">В Москве на стадионе «Мегаспорт» прошёл очередной матч регулярного чемпионата Континентальной хоккейной лиги между «Спартаком» и челябинским «Трактором».\nВстреча завершилась победой красно-белых со счётом 6:3.</string>
+
+    <string name="read">Прочитано</string>
+    <string name="image_description">Изображение</string>
 </resources>
