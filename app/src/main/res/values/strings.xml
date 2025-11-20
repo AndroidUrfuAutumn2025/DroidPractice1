@@ -1,4 +1,20 @@
 <resources>
+    <!-- Название приложения -->
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+
+    <!-- Первая статья -->
+    <string name="article_title">Первая статья</string>
+    <string name="article_body">Это первая статья. Здесь мы демонстрируем разные стили текста, подгружаем картинку из интернета и даем возможность поделиться содержимым.</string>
+    <string name="article_image_url">https://picsum.photos/800/400</string>
+
+    <!-- Вторая статья -->
+    <string name="second_article_title">Вторая статья</string>
+    <string name="second_article_body">Это вторая статья. Здесь мы показываем работу с XML‑разметкой, картинкой и переключателем.</string>
+    <string name="second_article_image_url">https://picsum.photos/900/500</string>
+
+    <!-- Общие строки -->
+    <string name="share_article">Поделиться статьёй</string>
+    <string name="article_image_desc">Изображение статьи</string>
+    <string name="return_button">Вернуться</string>
+    <string name="read_label">Прочитано</string>
 </resources>
