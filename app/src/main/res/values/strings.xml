@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+
+    <string name="article_title">Мир IT технологий</string>
+    <string name="article1_title">ИИ пишет код за нас?</string>
+    <string name="article1_p1">Современные большие языковые модели (LLM), такие как GPT-4 и Gemini, кардинально меняют подход к разработке программного обеспечения.</string>
+    <string name="article1_p2">Многие рутинные задачи, вроде написания Unit-тестов или верстки на Jetpack Compose, теперь можно делегировать нейросетям, оставив инженерам архитектурные решения.</string>
+    <string name="article1_share">Поделиться инсайтом</string>
+
+    <string name="article2_title">Нейросети рисуют картины</string>
+    <string name="article2_p1">Генеративные модели (Midjourney, DALL-E) научились создавать изображения, которые трудно отличить от работ профессиональных цифровых художников.</string>
+    <string name="article2_subtitle">Угроза для дизайнеров?</string>
+    <string name="article2_p2">Эксперты считают, что ИИ не заменит художников, но те художники, которые используют ИИ, заменят тех, кто его не использует. Это новый мощный инструмент в арсенале креатора.</string>
+    <string name="mark_as_read">Я прочитал эту статью</string>
 </resources>
