@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:padding="16dp">
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="vertical">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:tint="@color/white"
+            android:padding="12dp"
+            android:src="@drawable/arrow_back"
+            android:contentDescription="Назад"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Статья"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="На релизе Battlefield 6 количество игроков превысило 750 тысяч, а сейчас в среднем в день играет около 140 тысяч"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/articleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/purple_200"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="В преддверии выхода Battlefield 6 ажиотаж вокруг шутера от EA был просто невероятным. Казалось, что этот год наконец-то станет поднимет Battlefield до невероятных высот. И это было вполне закономерно: игра стартовала с взрывным успехом, собрав около 750 тысяч игроков, что превзошло все игры серии Call of Duty за всю историю.
+            \n
+            \nВ Battlefield 6 сейчас всего 64 тысячи игроков, а за последние 24 часа их число достигло 145 тысяч. Это на 80% меньше, чем на старте, и почти на 60% меньше, чем 350 тысяч игроков в среднем в предыдущем месяце."
+            android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/articleReadSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Прочитано" />
+    </LinearLayout>
+</ScrollView>
