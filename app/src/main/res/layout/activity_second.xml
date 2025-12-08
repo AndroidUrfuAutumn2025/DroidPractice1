@@ -8,11 +8,123 @@
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
+    <!-- Верхняя панель -->
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="Статья о сериале" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".SecondActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок статьи -->
+            <TextView
+                android:id="@+id/articleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Академия Амбрелла"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Обложка -->
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="590dp"
+                android:background="@color/purple_200"
+                android:contentDescription="Обложка статьи"
+                android:scaleType="centerCrop"
+                android:src="@drawable/umbrella_academy" />
+
+            <!-- Основной текст статьи -->
+            <TextView
+                android:id="@+id/articleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:padding="8dp"
+                android:text="«Академия Амбрелла» — история о семи приёмных детях-супергероях, которых воспитал эксцентричный миллиардер Харгривз. После его смерти семья снова собирается вместе и узнаёт, что миру грозит апокалипсис, а в центре конфликта — их собственные силы и секреты."
+                android:textAlignment="textStart"
+                android:textSize="18sp" />
+
+            <!-- ФАКТЫ -->
+            <TextView
+                android:id="@+id/articleFactsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:text="Интересные факты"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/articleFactsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="8dp"
+                android:text="Факты о сериале"
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <!-- СИЛЬНЫЕ СТОРОНЫ -->
+
+            <!-- СЛАБЫЕ СТОРОНЫ -->
+
+            <!-- Switch о прочтении статьи -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/teal_700"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <Switch
+                    android:id="@+id/switchRead"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Отметить прочтённой"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/readStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:text="Статья не прочитана"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <!-- Кнопка возврата -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Назад к списку статей" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
