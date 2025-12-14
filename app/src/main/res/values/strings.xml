@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="article_title_one">Статья 1</string>
+    <string name="article_head_one">Солнце</string>
+    <string name="article_one_paragraph_one">Одна из звёзд нашей галактики (Млечный Путь) и единственная звезда Солнечной системы. Вокруг Солнца обращаются другие объекты этой системы: планеты и их спутники, карликовые планеты и их спутники, астероиды, метеороиды, кометы и космическая пыль.</string>
+    <string name="article_one_paragraph_two">Солнце — ближайшая к Земле звезда. Средняя удалённость Солнца от Земли — 149,6 млн км[1] — приблизительно равна астрономической единице, а видимый угловой диаметр при наблюдении с Земли, как и у Луны, — чуть больше полуградуса (31—32 угловых минуты).</string>
+
+
+    <string name="article_title_two">Статья 2</string>
+    <string name="article_head_two">Луна</string>
+    <string name="img_luna">android.resource://ru.urfu.droidpractice1/drawable/luna</string>
+    <string name="img_luna_description">Изображение Луны</string>
+    <string name="article_two_paragraph_one">Единственный естественный спутник Земли. Самый близкий к Солнцу спутник планеты, так как у ближайших к Солнцу планет (Меркурия и Венеры) их нет</string>
+    <string name="article_two_paragraph_two">Луна появилась около 4,5 млрд лет назад,
+        немного позже Земли. Существует несколько гипотез происхождения Луны,
+        ни одна из которых не объясняет всех наблюдаемых особенностей
+        химического состава или взаимного движения. Наиболее популярна гипотеза о том,
+        что Луна сформировалась из осколков, оставшихся после «Гигантского столкновения»
+        Земли и Тейи — планеты, схожей по размерам с Марсом.</string>
+    <string name="readed">Прочитано</string>
+    <string name="back_to_first">Назад к первой статье</string>
 </resources>
