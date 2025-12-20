@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Тема для Android 5.0+ (API 21) и выше, совместима с MaterialToolbar -->
+    <style name="Theme.DroidPractice1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Базовые цвета. Добавь эти цвета в файл colors.xml, если их нет -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
 </resources>
