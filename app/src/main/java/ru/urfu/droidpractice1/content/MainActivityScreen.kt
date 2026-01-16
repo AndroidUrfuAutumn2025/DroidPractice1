@@ -34,16 +34,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.example.compose.CustomTheme
+import com.example.ui.theme.AppTypography
 import ru.urfu.droidpractice1.MainScreenHandler
 import ru.urfu.droidpractice1.R
-import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
-import ru.urfu.droidpractice1.ui.theme.Typography
 
 @Composable
 fun MainActivityScreen(
     handler: MainScreenHandler, isRead: Boolean = false, likesCount: Int = 0
 ) {
-    DroidPractice1Theme {
+    CustomTheme {
         Scaffold(
             modifier = Modifier.fillMaxSize(), topBar = {
                 TopAppBar(title = {
@@ -68,7 +68,7 @@ fun MainActivityScreen(
             ) {
                 Text(
                     text = stringResource(id = R.string.main_article_header),
-                    style = Typography.headlineMedium,
+                    style = AppTypography.titleLarge,
                     fontWeight = FontWeight.Medium
                 )
 
@@ -83,13 +83,13 @@ fun MainActivityScreen(
 
                 Text(
                     text = stringResource(id = R.string.main_article_text_1),
-                    style = Typography.bodyLarge,
+                    style = AppTypography.bodyLarge,
                     modifier = Modifier.padding(top = 8.dp)
                 )
 
                 Text(
                     text = stringResource(id = R.string.main_article_text_2),
-                    style = Typography.titleLarge,
+                    style = AppTypography.titleLarge,
                     modifier = Modifier.padding(top = 8.dp)
                 )
 
