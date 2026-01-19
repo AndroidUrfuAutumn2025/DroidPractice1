@@ -1,18 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingHorizontal="10dp"
     tools:context=".SecondActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Заголовок статьи -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Гений информационной эпохи. Почему именно Гукеш стал чемпионом мира по шахматам?"
+                android:textColor="@color/black"
+                android:textFontWeight="700"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Дмитрий Крявкин"
+                    android:textColor="@color/black"
+                    android:textFontWeight="500" />
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14.12.2024, 13:30 МСК"
+                    android:textColor="@color/black"
+                    android:textFontWeight="500" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="266dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chess_player" />
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Рассказываем историю 18-летнего вундеркинда из Индии."
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Начал играть только в семь лет"
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="12 декабря в Сингапуре завершился матч за звание мира по шахматам. После невероятной концовки, вызвавшей даже определённые кривотолки, индийский вундеркинд, 18-летний Гукеш Доммараджу отобрал корону у действующего чемпиона мира китайца Дин Лижэня. Мы знаем, что Гукеш очень сентиментальный юноша – он плакал после выигрыша. И что он верует – за победу он благодарил не только польских секундантов с наставником экс-чемпионом Виши Анандом, но и божественного Кришну. А что известно о чемпионе в шахматном смысле? В чём его исключительность и сила?"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Гукеш Доммараджу родился 29 мая 2006 года в индийском городе Ченнаи – как раз на родине Ананда, и Вишванатан с ранних лет считал Гукеша своим прямым шахматным наследником, всегда ему покровительствовал.\n\nМальчик появился на свет в семье врачей: отец – отоларинголог, а мать – микробиолог. Ребёнок научился играть в шахматы сравнительно поздно, в семь лет – это был факультатив в школе. Ещё ничего не предвещало, что это один из самых многообещающих вундеркиндов современности.\n\nВнеклассное занятие вскоре превратилось в страсть. Всего за несколько лет Гукеш последовательно стал победителем первенства Азии, а затем – первенства мира. Выполнил все баллы международного мастера, а затем и гроссмейстера в 12 лет 7 месяцев и 17 дней – это лишь на 17 дней позже, чем было у рекордно молодого на тот момент гроссмейстера Сергея Карякина.\n\nВпрочем, в одном из интервью ребёнок с невероятной для его возраста рассудительностью отмечал, что раз Магнус Карлсен не является самым молодым гроссмейстером в истории и при этом стал величайшим чемпионом, то ничего страшного! Вообще, удивительный самоконтроль и мудрость с детства были главными плюсами Гукеша. Даже в матче с Дин Лижэнем он после поражений был спокоен: «Ничего, будем бороться дальше!»"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="16sp" />
+
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Прочитано" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
