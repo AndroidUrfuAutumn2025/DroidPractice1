@@ -1,18 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".SecondActivity">
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!-- Заголовок статьи -->
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/article2_title"
+            android:textColor="@color/purple_700"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Изображение -->
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/article_placeholder"
+            android:contentDescription="@string/article_image_description"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Подпись к изображению -->
+        <TextView
+            android:id="@+id/image_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/article2_image_caption"
+            android:textColor="@color/teal_700"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Введение (жирный, выровненный по левому краю) -->
+        <TextView
+            android:id="@+id/article_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/article2_intro"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Основной текст (обычный, выровненный по ширине) -->
+        <TextView
+            android:id="@+id/article_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/article2_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Цитата (курсив, отступы, другой фон) -->
+        <TextView
+            android:id="@+id/article_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:padding="16dp"
+            android:text="@string/article2_quote"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Заключение (выровненное по правому краю) -->
+        <TextView
+            android:id="@+id/article_conclusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/article2_conclusion"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Переключатель "Прочитано" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/purple_200"
+            android:padding="16dp">
+
+            <Switch
+                android:id="@+id/read_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mark_as_read"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/read_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_read"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:paddingStart="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
