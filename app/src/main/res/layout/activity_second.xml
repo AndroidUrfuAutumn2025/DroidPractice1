@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,8 +9,54 @@
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:theme="?android:attr/actionBarTheme" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvArticle2Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Заголовок Второй Статьи"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/ivArticle2Image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="Изображение для второй статьи"
+            android:layout_marginBottom="16dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvArticle2Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Текст второй статьи. Мы используем платформенные компоненты Android, такие как android.widget.Toolbar и android.widget.Switch, так как наша тема приложения наследуется напрямую от android:Theme.Material.Light.NoActionBar. Это означает, что мы не полагаемся на атрибуты тем из библиотек androidx.appcompat или com.google.android.material для этих конкретных View."
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </ScrollView>
+
+        <Switch
+            android:id="@+id/switchArticleRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Статья прочитана" />
+    </LinearLayout>
 </LinearLayout>
+
