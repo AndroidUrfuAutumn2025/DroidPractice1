@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+    <string name="switch_text">Прочитано</string>
+    <string name="share_article">Поделиться</string>
+    <string name="first_article_title">Грубейшая ошибка вратаря в РПЛ! «Локо» близок к возвращению на первое место.</string>
+    <string name="first_article_text">Первыми сыграют «Ахмат» и «Акрон». Ещё недавно казалось, что у грозненцев проблемы, а тольяттинцы в порядке. Теперь всё наоборот: «Ахмат» после назначения Черчесова попёр вверх, а «Акрон» тонет в зоне стыковых матчей. Дополнительная интрига: встреча старых друзей — ведь к тренеру грозненцев едет Дзюба.</string>
+    <string name="shedule_read_2_article">Прочитать 2 статью</string>
+    <string name="already_read_2_article">Уже прочитал 2 статью</string>
+    <string name="second_article_title">Дзюба никак не может забить команде Черчесова!</string>
+    <string name="second_article_text">Следом нас ждёт встреча «Локомотива» и «Рубина». Обе команды неплохо по своим меркам начали сезон, и на данный момент их разделяют два очка. При этом «Локо» совсем близок к лидерам, поэтому победа, возможно, позволила бы прыгнуть совсем высоко. Но для этого нужно одолеть своего бывшего тренера — Рахимова.</string>
+    <string name="second_article_photo">Картинка на второй странички</string>
 </resources>
